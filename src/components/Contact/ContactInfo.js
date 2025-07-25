@@ -8,12 +8,12 @@ export default function ContactInfo() {
   return (
     <div className="space-y-8">
       {/* Contact Details */}
-      <div className="bg-green-50 p-8 rounded-xl">
+      <div className="bg-pink-50 p-8 rounded-xl">
         <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
 
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
-            <PhoneIcon className="text-green-600 text-2xl mt-1" />
+            <PhoneIcon className="text-pink-600 text-2xl mt-1" />
             <div>
               <h3 className="font-semibold text-gray-900">Phone</h3>
               <p className="text-gray-600">+91 99109 79774</p>
@@ -22,7 +22,7 @@ export default function ContactInfo() {
           </div>
 
           <div className="flex items-start space-x-4">
-            <EmailIcon className="text-green-600 text-2xl mt-1" />
+            <EmailIcon className="text-pink-600 text-2xl mt-1" />
             <div>
               <h3 className="font-semibold text-gray-900">Email</h3>
               <p className="text-gray-600">info@urbanescapewellness.com</p>
@@ -31,7 +31,7 @@ export default function ContactInfo() {
           </div>
 
           <div className="flex items-start space-x-4">
-            <LocationOnIcon className="text-green-600 text-2xl mt-1" />
+            <LocationOnIcon className="text-pink-600 text-2xl mt-1" />
             <div>
               <h3 className="font-semibold text-gray-900">Address</h3>
               <p className="text-gray-600">S-171/10, K-Block, Rangpuri Pahari, Inder camp, New Delhi, Delhi-110037</p>
@@ -39,7 +39,7 @@ export default function ContactInfo() {
                 href="https://maps.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-600 hover:text-green-700 text-sm flex items-center space-x-1 mt-1"
+                className="text-pink-600 hover:text-pink-700 text-sm flex items-center space-x-1 mt-1"
               >
                 <DirectionsIcon className="text-sm" />
                 <span>Get Directions</span>
@@ -48,7 +48,7 @@ export default function ContactInfo() {
           </div>
 
           <div className="flex items-start space-x-4">
-            <AccessTimeIcon className="text-green-600 text-2xl mt-1" />
+            <AccessTimeIcon className="text-pink-600 text-2xl mt-1" />
             <div>
               <h3 className="font-semibold text-gray-900">Hours</h3>
               <p className="text-gray-600">Open 24 Hours</p>
@@ -73,7 +73,7 @@ export default function ContactInfo() {
         <div className="space-y-3">
           <a
             href="tel:+919910979774"
-            className="w-full bg-green-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
+            className="w-full bg-pink-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-pink-700 transition-colors flex items-center justify-center space-x-2"
           >
             <PhoneIcon />
             <span>Call Now</span>
@@ -82,7 +82,7 @@ export default function ContactInfo() {
             href="https://wa.me/919910979774"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full bg-green-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-green-600 transition-colors text-center block"
+            className="w-full bg-pink-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-pink-600 transition-colors text-center block"
           >
             WhatsApp Us
           </a>

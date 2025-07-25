@@ -31,7 +31,7 @@ export default function AboutContent() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {values.map((value, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircleIcon className="text-green-600 text-xl" />
+                    <CheckCircleIcon className="text-pink-600 text-xl" />
                     <span className="text-gray-700">{value}</span>
                   </div>
                 ))}

@@ -80,19 +80,19 @@ export default function ServicesList() {
           {services.map((service, index) => (
             <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
               <div className="flex items-start space-x-4">
-                <div className="text-green-600 flex-shrink-0">{service.icon}</div>
+                <div className="text-pink-600 flex-shrink-0">{service.icon}</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="mb-4">
-                    <span className="text-sm font-medium text-green-600">Duration: {service.duration}</span>
+                    <span className="text-sm font-medium text-pink-600">Duration: {service.duration}</span>
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">Benefits:</h4>
                     <ul className="grid grid-cols-2 gap-1 text-sm text-gray-600">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center">
-                          <span className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
+                          <span className="w-1.5 h-1.5 bg-pink-600 rounded-full mr-2"></span>
                           {benefit}
                         </li>
                       ))}

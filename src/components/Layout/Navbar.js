@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <SpaIcon className="text-green-600 text-3xl" />
+            <SpaIcon className="text-pink-600 text-3xl" />
             <span className="text-xl font-bold text-gray-800">Urban Escape Wellness</span>
           </Link>
 
@@ -36,8 +36,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   pathname === link.href
-                    ? "text-green-600 bg-green-50"
-                    : "text-gray-700 hover:text-green-600 hover:bg-green-50"
+                    ? "text-pink-600 bg-pink-50"
+                    : "text-gray-700 hover:text-pink-600 hover:bg-pink-50"
                 }`}
               >
                 {link.label}
@@ -47,10 +47,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-green-600 focus:outline-none"
-            >
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-pink-600 focus:outline-none">
               {isOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
           </div>
@@ -66,8 +63,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     pathname === link.href
-                      ? "text-green-600 bg-green-50"
-                      : "text-gray-700 hover:text-green-600 hover:bg-green-50"
+                      ? "text-pink-600 bg-pink-50"
+                      : "text-gray-700 hover:text-pink-600 hover:bg-pink-50"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

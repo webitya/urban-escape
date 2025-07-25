@@ -52,7 +52,7 @@ export default function HomeServices() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our <span className="text-green-600">Premium Services</span>
+            Our <span className="text-pink-600">Premium Services</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose from our wide range of professional massage and wellness services designed to rejuvenate your body
@@ -64,10 +64,10 @@ export default function HomeServices() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-green-600 mb-4">{service.icon}</div>
+              <div className="text-pink-600 mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <div className="text-green-600 font-semibold">{service.price}</div>
+              <div className="text-pink-600 font-semibold">{service.price}</div>
             </div>
           ))}
         </div>
@@ -76,7 +76,7 @@ export default function HomeServices() {
         <div className="text-center">
           <Link
             href="/services"
-            className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block"
+            className="bg-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors inline-block"
           >
             View All Services
           </Link>

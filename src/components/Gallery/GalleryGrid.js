@@ -68,7 +68,7 @@ export default function GalleryGrid() {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                activeCategory === category ? "bg-green-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-green-100"
+                activeCategory === category ? "bg-pink-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-pink-100"
               }`}
             >
               {category}

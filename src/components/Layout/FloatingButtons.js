@@ -10,7 +10,7 @@ export default function FloatingButtons() {
         href="https://wa.me/919910979774?text=Hi! I would like to book a massage appointment."
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 group"
+        className="bg-pink-500 hover:bg-pink-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 group"
         aria-label="Contact us on WhatsApp"
       >
         <WhatsAppIcon className="text-2xl" />
