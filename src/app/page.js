@@ -8,12 +8,12 @@ import Footer from "../components/Layout/Footer"
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navbar />
+      {/* <Navbar />
       <HomeHero />
       <HomeAbout />
       <HomeServices />
       <HomeCta />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }
