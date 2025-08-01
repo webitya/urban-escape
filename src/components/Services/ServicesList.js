@@ -6,6 +6,10 @@ import LocalFloristIcon from "@mui/icons-material/LocalFlorist"
 import HealingIcon from "@mui/icons-material/Healing"
 import SpaIcon from "@mui/icons-material/Spa"
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew"
+import FavoriteIcon from "@mui/icons-material/Favorite"
+import SelfImprovementOutlinedIcon from "@mui/icons-material/SelfImprovementOutlined"
+import WhatsAppIcon from "@mui/icons-material/WhatsApp" // Import WhatsApp icon
+import Link from "next/link"
 
 export default function ServicesList() {
   const services = [
@@ -37,7 +41,7 @@ export default function ServicesList() {
       icon: <AccessibilityNewIcon className="text-4xl" />,
       title: "Foot Reflexology",
       description:
-        "Therapeutic foot massage applying pressure to specific reflex points that correspond to different organs and systems in the body.",
+        "Therapeutic foot massage applying pressure to specific points on feet, hands, and ears that correspond to different organs and systems in the body.",
       duration: "45-60 minutes",
       benefits: ["Improved circulation", "Stress reduction", "Better sleep", "Overall wellness"],
     },
@@ -72,7 +76,25 @@ export default function ServicesList() {
       duration: "60-90 minutes",
       benefits: ["Increased flexibility", "Energy boost", "Stress relief", "Improved posture"],
     },
+    {
+      icon: <SelfImprovementOutlinedIcon className="text-4xl" />,
+      title: "Shiatsu Massage",
+      description:
+        "A Japanese bodywork based on traditional Chinese medicine, using pressure with thumbs, fingers, and palms to unblock energy pathways and promote self-healing.",
+      duration: "60-90 minutes",
+      benefits: ["Energy balance", "Stress reduction", "Pain relief", "Improved posture"],
+    },
+    {
+      icon: <FavoriteIcon className="text-4xl" />,
+      title: "Nirvana Therapy",
+      description:
+        "A unique holistic therapy designed to achieve deep meditative states, combining gentle touch, sound healing, and guided relaxation to promote profound peace and well-being.",
+      duration: "90-120 minutes",
+      benefits: ["Deep relaxation", "Mental clarity", "Emotional release", "Spiritual connection"],
+    },
   ]
+
+  const phoneNumber = "919910979774" // Your phone number without '+'
 
   return (
     <section className="py-16 bg-white">
@@ -85,7 +107,12 @@ export default function ServicesList() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+            <div
+              key={index}
+              className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow relative pb-20 border border-pink-200"
+            >
+              {" "}
+              {/* Added border border-pink-200 */}
               <div className="flex items-start space-x-4">
                 <div className="text-pink-600 flex-shrink-0">{service.icon}</div>
                 <div className="flex-1">
@@ -107,6 +134,16 @@ export default function ServicesList() {
                   </div>
                 </div>
               </div>
+              {/* WhatsApp Book Now Button */}
+              <Link
+                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hello, I'd like to book a ${service.title} massage.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 left-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-2 hover:bg-green-600 transition-colors shadow-md"
+              >
+                <WhatsAppIcon className="text-lg" />
+                <span>Book Now</span>
+              </Link>
             </div>
           ))}
         </div>

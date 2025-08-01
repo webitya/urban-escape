@@ -79,7 +79,7 @@ export default function BeautyCareServices() {
       {/* Hero Section */}
       <section className="py-5 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Beauty Care Services</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6"><span className="text-pink-600">Beauty Care </span>Services</h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Indulge in our premium beauty treatments designed to enhance your natural radiance and leave you feeling
             refreshed and confident

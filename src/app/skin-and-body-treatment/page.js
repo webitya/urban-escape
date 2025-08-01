@@ -37,7 +37,7 @@ export default function SkinBodyTreatment() {
       {/* Hero Section */}
       <section className="pt-5 pb-2 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Skin & Body Treatment</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6"><span className="text-pink-600">Skin & Body</span> Treatment</h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Experience the ancient art of cupping therapy and modern skin treatments designed to heal, rejuvenate, and
             restore your body s natural balance
