@@ -17,11 +17,15 @@ export default function HomeHero() {
                 Experience ultimate relaxation and rejuvenation with our professional massage therapists in the heart of
                 New Delhi.
               </p>
+              {/* Added professional availability statement */}
+              <p className="text-lg text-gray-700 font-medium flex items-center space-x-2">
+                <SpaIcon className="text-pink-600 text-2xl" />
+                <span>Conveniently available for Home, Resort, and 5-Star Hotel visits.</span>
+              </p>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/services"
+                href="/wellness"
                 className="bg-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors text-center"
               >
                 View Services
@@ -34,7 +38,6 @@ export default function HomeHero() {
                 <span>Call Now</span>
               </a>
             </div>
-
             <div className="flex items-center space-x-4 text-sm text-gray-600">
               <div className="flex items-center space-x-1">
                 <span className="text-yellow-400">★★★★★</span>
@@ -44,13 +47,15 @@ export default function HomeHero() {
               <span>Open 24 Hours</span>
             </div>
           </div>
-
-          {/* Image */}
+          {/* Video */}
           <div className="relative">
             <div className="bg-pink-100 rounded-2xl p-8 relative overflow-hidden">
-              <img
-                src="/placeholder.svg?height=500&width=600"
-                alt="Massage therapy room"
+              <video
+                src="/vid.mp4"
+                loop
+                autoPlay
+                muted
+                playsInline // Added for better mobile compatibility
                 className="w-full h-96 object-cover rounded-xl"
               />
               <div className="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg">

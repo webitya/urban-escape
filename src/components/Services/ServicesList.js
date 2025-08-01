@@ -11,6 +11,38 @@ export default function ServicesList() {
   const services = [
     {
       icon: <SelfImprovementIcon className="text-4xl" />,
+      title: "Balinese Massage",
+      description:
+        "Traditional Indonesian massage combining gentle stretches, acupressure, and aromatherapy oils for deep relaxation and spiritual healing.",
+      duration: "75-90 minutes",
+      benefits: ["Deep relaxation", "Improved circulation", "Stress relief", "Spiritual balance"],
+    },
+    {
+      icon: <LocalFloristIcon className="text-4xl" />,
+      title: "Bamboo Massage",
+      description:
+        "Innovative massage technique using heated bamboo canes to knead and roll away tension from muscles and joints.",
+      duration: "60-75 minutes",
+      benefits: ["Muscle tension relief", "Improved flexibility", "Better circulation", "Lymphatic drainage"],
+    },
+    {
+      icon: <HealingIcon className="text-4xl" />,
+      title: "Potli Massage",
+      description:
+        "Ayurvedic massage using heated herbal pouches filled with medicinal herbs, rice, and essential oils to rejuvenate the body.",
+      duration: "60-90 minutes",
+      benefits: ["Pain relief", "Detoxification", "Improved skin texture", "Muscle strengthening"],
+    },
+    {
+      icon: <AccessibilityNewIcon className="text-4xl" />,
+      title: "Foot Reflexology",
+      description:
+        "Therapeutic foot massage applying pressure to specific reflex points that correspond to different organs and systems in the body.",
+      duration: "45-60 minutes",
+      benefits: ["Improved circulation", "Stress reduction", "Better sleep", "Overall wellness"],
+    },
+    {
+      icon: <SpaIcon className="text-4xl" />,
       title: "Swedish Massage",
       description:
         "A gentle, relaxing massage using long strokes, kneading, and circular movements to help you relax and energize.",
@@ -34,48 +66,23 @@ export default function ServicesList() {
     },
     {
       icon: <FitnessCenterIcon className="text-4xl" />,
-      title: "Sports Massage",
-      description:
-        "Specialized massage designed for athletes and active individuals to prevent injuries and enhance performance.",
-      duration: "45-60 minutes",
-      benefits: ["Injury prevention", "Enhanced performance", "Faster recovery", "Flexibility improvement"],
-    },
-    {
-      icon: <LocalFloristIcon className="text-4xl" />,
-      title: "Hot Stone Therapy",
-      description: "Uses heated stones placed on specific points of the body to warm and loosen tight muscles.",
-      duration: "75-90 minutes",
-      benefits: ["Deep muscle relaxation", "Improved circulation", "Stress relief", "Pain reduction"],
-    },
-    {
-      icon: <HealingIcon className="text-4xl" />,
-      title: "Reflexology",
-      description:
-        "Applies pressure to specific points on feet, hands, and ears that correspond to different body organs.",
-      duration: "45-60 minutes",
-      benefits: ["Improved circulation", "Stress reduction", "Better sleep", "Pain relief"],
-    },
-    {
-      icon: <SpaIcon className="text-4xl" />,
       title: "Thai Massage",
       description:
         "Traditional massage combining acupressure, stretching, and yoga-like positions for flexibility and energy.",
       duration: "60-90 minutes",
       benefits: ["Increased flexibility", "Energy boost", "Stress relief", "Improved posture"],
     },
-    {
-      icon: <AccessibilityNewIcon className="text-4xl" />,
-      title: "Prenatal Massage",
-      description:
-        "Gentle massage specifically designed for pregnant women to reduce discomfort and promote relaxation.",
-      duration: "60 minutes",
-      benefits: ["Reduced swelling", "Pain relief", "Better sleep", "Stress reduction"],
-    },
   ]
 
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Massage Services</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Experience the healing power of touch with our comprehensive range of therapeutic massage treatments
+          </p>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">

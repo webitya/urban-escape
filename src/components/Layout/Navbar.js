@@ -22,7 +22,9 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/services", label: "Services" },
+    { href: "/wellness", label: "Wellness" },
+     { href: "/beauty-care", label: "Beauty Care" },
+      { href: "/skin-and-body-treatment", label: "Skin & Body treatment" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact Us" },
   ]
@@ -31,7 +33,7 @@ export default function Navbar() {
     <>
       {/* Main Navbar */}
       <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-30">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="mmx-auto px-3">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
@@ -40,7 +42,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden md:flex items-center space-x-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

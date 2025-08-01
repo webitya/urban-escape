@@ -12,22 +12,23 @@ export default function HomeAbout() {
     "Relaxing ambiance",
     "24/7 availability",
   ]
-
   const stats = [
     { icon: <SpaIcon className="text-3xl" />, number: "500+", label: "Happy Clients" },
     { icon: <PeopleIcon className="text-3xl" />, number: "10+", label: "Expert Therapists" },
     { icon: <AccessTimeIcon className="text-3xl" />, number: "24/7", label: "Service Hours" },
   ]
-
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image */}
+          {/* Video */}
           <div className="relative">
-            <img
-              src="/placeholder.svg?height=500&width=600"
-              alt="Professional massage therapy"
+            <video
+              src="/vid2.mp4"
+              loop
+              autoPlay
+              muted
+              playsInline // Added for better mobile compatibility
               className="w-full h-96 object-cover rounded-2xl shadow-lg"
             />
             <div className="absolute -bottom-6 -right-6 bg-pink-600 text-white p-6 rounded-xl shadow-lg">
@@ -38,7 +39,6 @@ export default function HomeAbout() {
               </div>
             </div>
           </div>
-
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -51,7 +51,6 @@ export default function HomeAbout() {
                 relax and rejuvenate.
               </p>
             </div>
-
             {/* Features */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {features.map((feature, index) => (
@@ -61,7 +60,6 @@ export default function HomeAbout() {
                 </div>
               ))}
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
               {stats.map((stat, index) => (
