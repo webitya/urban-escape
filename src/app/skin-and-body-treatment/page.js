@@ -97,7 +97,7 @@ const cuppingTherapies = [
                             <h3 className="text-xl font-bold text-gray-900">{therapy.title}</h3>
                             <div className="text-right">
                               {/* <p className="text-xs text-gray-500">Starting at</p> */}
-                              {/* <p className="text-lg font-bold text-pink-600">{therapy.startingPrice}</p> */}
+                              <p className="text-lg font-bold text-pink-600">{therapy.startingPrice}</p>
                             </div>
                           </div>
 

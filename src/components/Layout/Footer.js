@@ -83,8 +83,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">&copy; 2024 Urban Escape Wellness. All rights reserved.</p>
+        {/* Bottom Footer */}
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400 space-y-2">
+          <p>&copy; 2024 Urban Escape Wellness. All rights reserved.</p>
+          <p>
+            Crafted with ❤️ by{" "}
+            <a
+              href="https://nextbizdigital.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-400 hover:text-pink-500 font-medium"
+            >
+              NextBiz Digital
+            </a>
+          </p>
         </div>
       </div>
     </footer>

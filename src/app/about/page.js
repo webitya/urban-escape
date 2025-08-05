@@ -10,7 +10,7 @@ export default function About() {
       <Navbar />
       <AboutHero />
       <AboutContent />
-      <AboutTeam />
+      {/* <AboutTeam /> */}
       <Footer />
     </div>
   )

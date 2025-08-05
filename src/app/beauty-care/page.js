@@ -55,8 +55,8 @@ export default function BeautyCareServices() {
       title: "Pedicure",
       description:
         "Complete foot care treatment with nail grooming, callus removal, foot massage, and polish for healthy, beautiful feet.",
-      duration: "60-75 minutes",
-      startingPrice: "₹3,000",
+      duration: "60 minutes",
+      startingPrice: "₹2,000",
       benefits: ["Healthy feet", "Smooth skin", "Relaxation", "Beautiful nails"],
       includes: ["Foot soak", "Nail care", "Callus removal", "Foot massage", "Polish"],
     },

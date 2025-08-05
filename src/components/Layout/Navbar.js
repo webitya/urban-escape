@@ -1,9 +1,11 @@
-"use client"
+'use client'
+
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import SpaIcon from "@mui/icons-material/Spa"
 import PhoneIcon from "@mui/icons-material/Phone"
+import InstagramIcon from "@mui/icons-material/Instagram"
 import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 import LocationOnIcon from "@mui/icons-material/LocationOn"
@@ -13,18 +15,16 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  // Close menu on route change
   useEffect(() => {
     setMenuOpen(false)
   }, [pathname])
 
-  // Navigation links
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/wellness", label: "Wellness" },
-     { href: "/beauty-care", label: "Beauty Care" },
-      { href: "/skin-and-body-treatment", label: "Skin & Body treatment" },
+    { href: "/beauty-care", label: "Beauty Care" },
+    { href: "/skin-and-body-treatment", label: "Skin & Body treatment" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact Us" },
   ]
@@ -33,7 +33,7 @@ export default function Navbar() {
     <>
       {/* Main Navbar */}
       <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-30">
-        <div className="mmx-auto px-3">
+        <div className="mx-auto px-3">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
@@ -47,7 +47,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-2 py-2 rounded-md text-sm font-medium transition-colors ${
                     pathname === link.href
                       ? "text-pink-600 bg-pink-50"
                       : "text-gray-700 hover:text-pink-600 hover:bg-pink-50"
@@ -57,7 +57,7 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              {/* Direct Call Button */}
+              {/* Call Button */}
               <a
                 href="tel:+919910979774"
                 className="bg-pink-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-pink-700 transition-colors flex items-center space-x-2"
@@ -65,6 +65,18 @@ export default function Navbar() {
               >
                 <PhoneIcon className="text-sm" />
                 <span>+91 99109 79774</span>
+              </a>
+
+              {/* Instagram Button */}
+              <a
+                href="https://www.instagram.com/urban_escape_wellness/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-pink-100 text-pink-600 px-3 py-2 rounded-lg font-medium hover:bg-pink-200 transition-colors flex items-center space-x-1"
+                aria-label="Visit our Instagram"
+              >
+                <InstagramIcon className="text-base" />
+                <span className="text-sm">Instagram</span>
               </a>
             </nav>
 
@@ -83,7 +95,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Menu - Glassmorphism Backdrop */}
+      {/* Mobile Backdrop */}
       <div
         className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ${
           menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -96,7 +108,7 @@ export default function Navbar() {
         }}
       ></div>
 
-      {/* Mobile Menu Panel - Slides from RIGHT */}
+      {/* Mobile Menu Panel */}
       <div
         className={`fixed top-0 right-0 bottom-0 w-72 bg-white z-40 md:hidden transform transition-transform duration-300 ease-in-out shadow-2xl ${
           menuOpen ? "translate-x-0" : "translate-x-full"
@@ -134,7 +146,7 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* Direct Call Button in Mobile Menu */}
+            {/* Call Button (Mobile) */}
             <a
               href="tel:+919910979774"
               className="w-full text-left px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 transition-colors flex items-center space-x-2"
@@ -145,10 +157,10 @@ export default function Navbar() {
             </a>
           </nav>
 
-          {/* Compact Location Section */}
+          {/* Mobile Location Info */}
           <div className="px-4 pb-4 mt-auto">
             <div className="bg-gray-50 rounded-lg p-3 border">
-              {/* Compact Google Map */}
+              {/* Map */}
               <div className="relative w-full h-32 mb-3 rounded-md overflow-hidden">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
@@ -161,7 +173,7 @@ export default function Navbar() {
                 ></iframe>
               </div>
 
-              {/* Address Text */}
+              {/* Address */}
               <div className="space-y-2">
                 <div className="flex items-start space-x-2">
                   <LocationOnIcon className="text-pink-600 text-sm mt-0.5 flex-shrink-0" />
@@ -173,7 +185,7 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                {/* Get Directions Button */}
+                {/* Directions */}
                 <a
                   href="https://www.google.com/maps/dir/?api=1&destination=S-171/10,+K-Block,+Rangpuri+Pahari,+Inder+camp,+New+Delhi,+Delhi-110037"
                   target="_blank"
@@ -187,7 +199,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Business Hours - Compact */}
+            {/* Business Hours */}
             <div className="mt-3 bg-green-50 rounded-lg p-3 border border-green-200">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -201,7 +213,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Spacer to prevent content from being hidden under the navbar */}
+      {/* Prevent Overlap */}
       <div className="h-16"></div>
     </>
   )

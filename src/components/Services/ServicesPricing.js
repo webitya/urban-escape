@@ -21,9 +21,9 @@ export default function ServicesPricing() {
       name: "Luxury Package",
       price: "₹50,000",
       time:"90 Minutes",
-      duration: "25 therapy Full Body Massage (ANI)",
+      duration: "25 therapy ",
       services: [
-        "Full Body Massage",
+        "Full Body Massage (ANI)",
         "Hot Stone Therapy",
         "Aromatherapy",
         "Face & Scalp Massage",
@@ -76,11 +76,11 @@ export default function ServicesPricing() {
               </ul>
 
               <a
-                href="tel:+919910979774"
+                href="/contact"
                 className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-colors ${
                   pkg.popular
                     ? "bg-pink-600 text-white hover:bg-pink-700"
-                    : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                    : "bg-pink-600 text-white hover:bg-pink-700"
                 }`}
               >
                 Book Now

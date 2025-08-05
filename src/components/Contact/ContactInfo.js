@@ -16,17 +16,17 @@ export default function ContactInfo() {
     {
       icon: <InstagramIcon className="text-pink-600 text-2xl" />,
       label: "Instagram",
-      href: "https://instagram.com/yourpage",
+      href: "https://www.instagram.com/urban_escape_wellness/",
     },
     {
       icon: <FacebookIcon className="text-pink-600 text-2xl" />,
       label: "Facebook",
-      href: "https://facebook.com/yourpage",
+      href: "https://www.instagram.com/urban_escape_wellness/",
     },
     {
       icon: <YouTubeIcon className="text-pink-600 text-2xl" />,
       label: "YouTube",
-      href: "https://youtube.com/yourchannel",
+      href: "https://www.instagram.com/urban_escape_wellness/",
     },
     {
       icon: <WhatsAppIcon className="text-pink-600 text-2xl" />,
