@@ -35,7 +35,7 @@ export default function BeautyCareServices() {
       title: "Body Detox",
       description:
         "Comprehensive detoxification treatment using natural ingredients to cleanse and purify your body from within.",
-      duration: "90-120 minutes",
+      duration: "60-90 minutes",
       startingPrice: "₹3,000",
       benefits: ["Toxin removal", "Improved metabolism", "Better skin", "Energy boost"],
       includes: ["Body wrap", "Herbal treatment", "Lymphatic drainage", "Hydration therapy"],
@@ -45,8 +45,8 @@ export default function BeautyCareServices() {
       title: "Manicure",
       description:
         "Professional nail care treatment including shaping, cuticle care, polish application, and hand massage for beautiful nails.",
-      duration: "45-60 minutes",
-      startingPrice: "₹3,000",
+      duration: "60 Minutes",
+      startingPrice: "₹2,000",
       benefits: ["Healthy nails", "Soft hands", "Professional finish", "Long-lasting"],
       includes: ["Nail shaping", "Cuticle care", "Hand massage", "Polish application"],
     },
@@ -66,7 +66,7 @@ export default function BeautyCareServices() {
       description:
         "Professional hair removal service for smooth, hair-free skin using high-quality wax and gentle techniques.",
       duration: "90-120 minutes",
-      startingPrice: "₹2,000",
+      startingPrice: "₹3,000",
       benefits: ["Smooth skin", "Long-lasting results", "Professional technique", "Gentle process"],
       includes: ["Pre-wax preparation", "Hair removal", "Soothing treatment", "Aftercare"],
     },

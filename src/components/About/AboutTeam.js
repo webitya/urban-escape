@@ -38,7 +38,7 @@ export default function AboutTeam() {
                 alt={member.name}
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+              {/* <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3> */}
               <p className="text-green-600 font-medium mb-1">{member.role}</p>
               <p className="text-gray-600">{member.experience}</p>
             </div>

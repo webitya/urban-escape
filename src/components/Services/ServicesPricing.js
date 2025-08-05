@@ -4,21 +4,24 @@ export default function ServicesPricing() {
   const packages = [
     {
       name: "Basic Package",
-      price: "₹2,000",
-      duration: "60 minutes",
-      services: ["Swedish Massage", "Basic Aromatherapy", "Relaxation Music", "Herbal Tea"],
+      price: "₹30,000",
+      time:"60 Minutes",
+      duration: "15 massages services",
+      services: ["Swedish Massage", "Basic Aromatherapy", "Relaxation Music", "Refeshment","Get  gift voucher (sports branded t-shirt)"],
     },
     {
       name: "Premium Package",
-      price: "₹3,500",
-      duration: "90 minutes",
-      services: ["Deep Tissue Massage", "Hot Stone Therapy", "Aromatherapy", "Face Massage", "Refreshments"],
+      price: "₹40,000",
+      time:"60 Minutes",
+      duration: "20 therapy ",
+      services: ["Deep Tissue Massage", "Hot Stone Therapy", "Aromatherapy", "Face Massage", "Refreshments","Get Gift Voucher (branded perfumes)"],
       popular: true,
     },
     {
       name: "Luxury Package",
-      price: "₹5,000",
-      duration: "120 minutes",
+      price: "₹50,000",
+      time:"90 Minutes",
+      duration: "25 therapy Full Body Massage (ANI)",
       services: [
         "Full Body Massage",
         "Hot Stone Therapy",
@@ -26,6 +29,7 @@ export default function ServicesPricing() {
         "Face & Scalp Massage",
         "Reflexology",
         "Premium Refreshments",
+        "Gift voucher upto 8000"
       ],
     },
   ]
@@ -57,7 +61,9 @@ export default function ServicesPricing() {
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">{pkg.name}</h3>
                 <div className="text-3xl font-bold text-pink-600 mb-1">{pkg.price}</div>
+<div className="text-sm font-bold text-pink-600 mb-1">{pkg.time}</div>
                 <div className="text-gray-600">{pkg.duration}</div>
+
               </div>
 
               <ul className="space-y-3 mb-8">

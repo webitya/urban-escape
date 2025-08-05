@@ -1,10 +1,40 @@
+'use client'
+
 import PhoneIcon from "@mui/icons-material/Phone"
 import EmailIcon from "@mui/icons-material/Email"
 import LocationOnIcon from "@mui/icons-material/LocationOn"
 import AccessTimeIcon from "@mui/icons-material/AccessTime"
 import DirectionsIcon from "@mui/icons-material/Directions"
 
+import FacebookIcon from "@mui/icons-material/Facebook"
+import InstagramIcon from "@mui/icons-material/Instagram"
+import YouTubeIcon from "@mui/icons-material/YouTube"
+import WhatsAppIcon from "@mui/icons-material/WhatsApp"
+
 export default function ContactInfo() {
+  const socialLinks = [
+    {
+      icon: <InstagramIcon className="text-pink-600 text-2xl" />,
+      label: "Instagram",
+      href: "https://instagram.com/yourpage",
+    },
+    {
+      icon: <FacebookIcon className="text-pink-600 text-2xl" />,
+      label: "Facebook",
+      href: "https://facebook.com/yourpage",
+    },
+    {
+      icon: <YouTubeIcon className="text-pink-600 text-2xl" />,
+      label: "YouTube",
+      href: "https://youtube.com/yourchannel",
+    },
+    {
+      icon: <WhatsAppIcon className="text-pink-600 text-2xl" />,
+      label: "WhatsApp",
+      href: "https://wa.me/919910979774",
+    },
+  ]
+
   return (
     <div className="space-y-8">
       {/* Contact Details */}
@@ -56,6 +86,22 @@ export default function ContactInfo() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Social Media Links */}
+      <div className="bg-white p-4 rounded-xl shadow flex items-center justify-center space-x-4">
+        {socialLinks.map((item, index) => (
+          <a
+            key={index}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={item.label}
+            className="hover:text-pink-700 transition-colors"
+          >
+            {item.icon}
+          </a>
+        ))}
       </div>
 
       {/* Map */}

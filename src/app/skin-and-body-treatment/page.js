@@ -7,28 +7,39 @@ import Footer from "@/components/Layout/Footer"
 import Navbar from "@/components/Layout/Navbar"
 
 export default function SkinBodyTreatment() {
-  const cuppingTherapies = [
-    {
-      icon: <SpaIcon className="text-3xl" />,
-      title: "Dry Cupping Therapy",
-      description:
-        "Non-invasive cupping method using vacuum suction without skin puncturing. Ideal for muscle tension, circulation improvement, and general wellness.",
-      duration: "30-45 minutes",
-      startingPrice: "₹2,000",
-      benefits: ["Muscle tension relief", "Better circulation", "Toxin removal", "Relaxation"],
-      includes: ["Assessment", "Dry cupping session", "Relaxation time", "Post-treatment care"],
-    },
-    {
-      icon: <LocalHospitalIcon className="text-3xl" />,
-      title: "Wet Cupping Therapy",
-      description:
-        "Traditional hijama therapy combining cupping with controlled micro-incisions for deeper detoxification and therapeutic benefits under professional supervision.",
-      duration: "60-75 minutes",
-      startingPrice: "₹3,500",
-      benefits: ["Deep detoxification", "Blood purification", "Pain management", "Immune boost"],
-      includes: ["Medical consultation", "Sterilization", "Wet cupping procedure", "Wound care"],
-    },
-  ]
+const cuppingTherapies = [
+  {
+    icon: <SpaIcon className="text-3xl" />,
+    title: "Dry Cupping Therapy",
+    description:
+      "Non-invasive cupping method using vacuum suction without skin puncturing. Ideal for muscle tension, circulation improvement, and general wellness.",
+    duration: "60 minutes",
+    startingPrice: "₹4,000",
+    benefits: ["Muscle tension relief", "Better circulation", "Toxin removal", "Relaxation"],
+    includes: ["Assessment", "Dry cupping session", "Relaxation time", "Post-treatment care"],
+  },
+  {
+    icon: <LocalHospitalIcon className="text-3xl" />,
+    title: "Wet Cupping Therapy",
+    description:
+      "Traditional hijama therapy combining cupping with controlled micro-incisions for deeper detoxification and therapeutic benefits under professional supervision.",
+    duration: "90 minutes",
+    startingPrice: "₹6,000",
+    benefits: ["Deep detoxification", "Blood purification", "Pain management", "Immune boost"],
+    includes: ["Medical consultation", "Sterilization", "Wet cupping procedure", "Wound care"],
+  },
+  {
+    icon: <SpaIcon className="text-3xl" />,
+    title: "Facial Cupping Therapy",
+    description:
+      "A gentle, rejuvenating technique that uses small suction cups to stimulate facial muscles, increase blood flow, and enhance natural collagen production for a youthful glow.",
+    duration: "60 minutes",
+    startingPrice: "₹3,000",
+    benefits: ["Improved skin tone", "Reduced puffiness", "Lymphatic drainage", "Natural glow"],
+    includes: ["Skin assessment", "Facial cupping session", "Soothing serum application", "Post-care advice"],
+  },
+];
+
 
   return (
   <>
@@ -85,8 +96,8 @@ export default function SkinBodyTreatment() {
                           <div className="flex justify-between items-start mb-3">
                             <h3 className="text-xl font-bold text-gray-900">{therapy.title}</h3>
                             <div className="text-right">
-                              <p className="text-xs text-gray-500">Starting at</p>
-                              <p className="text-lg font-bold text-pink-600">{therapy.startingPrice}</p>
+                              {/* <p className="text-xs text-gray-500">Starting at</p> */}
+                              {/* <p className="text-lg font-bold text-pink-600">{therapy.startingPrice}</p> */}
                             </div>
                           </div>
 

@@ -6,7 +6,7 @@ export default function AboutContent() {
     "Client Satisfaction",
     "Hygiene & Safety",
     "Continuous Innovation",
-    "Affordable Pricing",
+    "Certified & Experienced therapist",
     "Personalized Care",
   ]
 

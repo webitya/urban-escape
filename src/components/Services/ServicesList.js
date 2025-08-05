@@ -10,89 +10,99 @@ import FavoriteIcon from "@mui/icons-material/Favorite"
 import SelfImprovementOutlinedIcon from "@mui/icons-material/SelfImprovementOutlined"
 import WhatsAppIcon from "@mui/icons-material/WhatsApp" // Import WhatsApp icon
 import Link from "next/link"
+import { SportsBarOutlined, SportsBarRounded } from "@mui/icons-material"
 
 export default function ServicesList() {
-  const services = [
-    {
-      icon: <SelfImprovementIcon className="text-4xl" />,
-      title: "Balinese Massage",
-      description:
-        "Traditional Indonesian massage combining gentle stretches, acupressure, and aromatherapy oils for deep relaxation and spiritual healing.",
-      duration: "75-90 minutes",
-      benefits: ["Deep relaxation", "Improved circulation", "Stress relief", "Spiritual balance"],
-    },
-    {
-      icon: <LocalFloristIcon className="text-4xl" />,
-      title: "Bamboo Massage",
-      description:
-        "Innovative massage technique using heated bamboo canes to knead and roll away tension from muscles and joints.",
-      duration: "60-75 minutes",
-      benefits: ["Muscle tension relief", "Improved flexibility", "Better circulation", "Lymphatic drainage"],
-    },
-    {
-      icon: <HealingIcon className="text-4xl" />,
-      title: "Potli Massage",
-      description:
-        "Ayurvedic massage using heated herbal pouches filled with medicinal herbs, rice, and essential oils to rejuvenate the body.",
-      duration: "60-90 minutes",
-      benefits: ["Pain relief", "Detoxification", "Improved skin texture", "Muscle strengthening"],
-    },
-    {
-      icon: <AccessibilityNewIcon className="text-4xl" />,
-      title: "Foot Reflexology",
-      description:
-        "Therapeutic foot massage applying pressure to specific points on feet, hands, and ears that correspond to different organs and systems in the body.",
-      duration: "45-60 minutes",
-      benefits: ["Improved circulation", "Stress reduction", "Better sleep", "Overall wellness"],
-    },
-    {
-      icon: <SpaIcon className="text-4xl" />,
-      title: "Swedish Massage",
-      description:
-        "A gentle, relaxing massage using long strokes, kneading, and circular movements to help you relax and energize.",
-      duration: "60-90 minutes",
-      benefits: ["Stress relief", "Improved circulation", "Muscle relaxation", "Better sleep"],
-    },
-    {
-      icon: <HotTubIcon className="text-4xl" />,
-      title: "Deep Tissue Massage",
-      description: "Targets deeper layers of muscle and connective tissue to address chronic pain and muscle tension.",
-      duration: "60-90 minutes",
-      benefits: ["Pain relief", "Improved mobility", "Reduced inflammation", "Faster healing"],
-    },
-    {
-      icon: <FaceRetouchingNaturalIcon className="text-4xl" />,
-      title: "Aromatherapy Massage",
-      description:
-        "Combines gentle massage with essential oils to enhance relaxation and promote emotional well-being.",
-      duration: "60-75 minutes",
-      benefits: ["Stress reduction", "Mood enhancement", "Better sleep", "Emotional balance"],
-    },
-    {
-      icon: <FitnessCenterIcon className="text-4xl" />,
-      title: "Thai Massage",
-      description:
-        "Traditional massage combining acupressure, stretching, and yoga-like positions for flexibility and energy.",
-      duration: "60-90 minutes",
-      benefits: ["Increased flexibility", "Energy boost", "Stress relief", "Improved posture"],
-    },
-    {
-      icon: <SelfImprovementOutlinedIcon className="text-4xl" />,
-      title: "Shiatsu Massage",
-      description:
-        "A Japanese bodywork based on traditional Chinese medicine, using pressure with thumbs, fingers, and palms to unblock energy pathways and promote self-healing.",
-      duration: "60-90 minutes",
-      benefits: ["Energy balance", "Stress reduction", "Pain relief", "Improved posture"],
-    },
-    {
-      icon: <FavoriteIcon className="text-4xl" />,
-      title: "Nirvana Therapy",
-      description:
-        "A unique holistic therapy designed to achieve deep meditative states, combining gentle touch, sound healing, and guided relaxation to promote profound peace and well-being.",
-      duration: "90-120 minutes",
-      benefits: ["Deep relaxation", "Mental clarity", "Emotional release", "Spiritual connection"],
-    },
-  ]
+const services = [
+  {
+    icon: <SelfImprovementIcon className="text-4xl" />,
+    title: "Balinese Massage",
+    description:
+      "Traditional Indonesian massage combining gentle stretches, acupressure, and aromatherapy oils for deep relaxation and spiritual healing.",
+    duration: "60-90 minutes",
+    benefits: ["Deep relaxation", "Improved circulation", "Stress relief", "Spiritual balance"],
+  },
+  {
+    icon: <LocalFloristIcon className="text-4xl" />,
+    title: "Bamboo Massage",
+    description:
+      "Innovative massage technique using heated bamboo canes to knead and roll away tension from muscles and joints.",
+    duration: "60-90 minutes",
+    benefits: ["Muscle tension relief", "Improved flexibility", "Better circulation", "Lymphatic drainage"],
+  },
+  {
+    icon: <HealingIcon className="text-4xl" />,
+    title: "Potli Massage",
+    description:
+      "Ayurvedic massage using heated herbal pouches filled with medicinal herbs, rice, and essential oils to rejuvenate the body.",
+    duration: "60-90 minutes",
+    benefits: ["Pain relief", "Detoxification", "Improved skin texture", "Muscle strengthening"],
+  },
+  {
+    icon: <AccessibilityNewIcon className="text-4xl" />,
+    title: "Foot Reflexology",
+    description:
+      "Therapeutic foot massage applying pressure to specific points on feet, hands, and ears that correspond to different organs and systems in the body.",
+    duration: "60-90 minutes",
+    benefits: ["Improved circulation", "Stress reduction", "Better sleep", "Overall wellness"],
+  },
+  {
+    icon: <SpaIcon className="text-4xl" />,
+    title: "Swedish Massage",
+    description:
+      "A gentle, relaxing massage using long strokes, kneading, and circular movements to help you relax and energize.",
+    duration: "60-90 minutes",
+    benefits: ["Stress relief", "Improved circulation", "Muscle relaxation", "Better sleep"],
+  },
+  {
+    icon: <HotTubIcon className="text-4xl" />,
+    title: "Deep Tissue Massage",
+    description: "Targets deeper layers of muscle and connective tissue to address chronic pain and muscle tension.",
+    duration: "60-90 minutes",
+    benefits: ["Pain relief", "Improved mobility", "Reduced inflammation", "Faster healing"],
+  },
+  {
+    icon: <FaceRetouchingNaturalIcon className="text-4xl" />,
+    title: "Aromatherapy Massage",
+    description:
+      "Combines gentle massage with essential oils to enhance relaxation and promote emotional well-being.",
+    duration: "60-90 minutes",
+    benefits: ["Stress reduction", "Mood enhancement", "Better sleep", "Emotional balance"],
+  },
+  {
+    icon: <FitnessCenterIcon className="text-4xl" />,
+    title: "Thai Massage",
+    description:
+      "Traditional massage combining acupressure, stretching, and yoga-like positions for flexibility and energy.",
+    duration: "60-90 minutes",
+    benefits: ["Increased flexibility", "Energy boost", "Stress relief", "Improved posture"],
+  },
+  {
+    icon: <SportsBarRounded className="text-4xl" />,
+    title: "Sports Massage",
+    description:
+      "Focused massage designed for athletes and active individuals to prevent injuries, improve performance, and speed up recovery.",
+    duration: "60-90 minutes",
+    benefits: ["Improved flexibility", "Injury prevention", "Faster recovery", "Muscle performance"],
+  },
+  {
+    icon: <SelfImprovementOutlinedIcon className="text-4xl" />,
+    title: "Shiatsu Massage",
+    description:
+      "A Japanese bodywork based on traditional Chinese medicine, using pressure with thumbs, fingers, and palms to unblock energy pathways and promote self-healing.",
+    duration: "60-90 minutes",
+    benefits: ["Energy balance", "Stress reduction", "Pain relief", "Improved posture"],
+  },
+  {
+    icon: <FavoriteIcon className="text-4xl" />,
+    title: "Nirvana Therapy",
+    description:
+      "A unique holistic therapy designed to achieve deep meditative states, combining gentle touch, sound healing, and guided relaxation to promote profound peace and well-being.",
+    duration: "90-60 minutes",
+    benefits: ["Deep relaxation", "Mental clarity", "Emotional release", "Spiritual connection"],
+  },
+];
+
 
   const phoneNumber = "919910979774" // Your phone number without '+'
 
