@@ -67,7 +67,7 @@ export default function HomeServices() {
               <div className="text-pink-600 mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <div className="text-pink-600 font-semibold">{service.price}</div>
+              {/* <div className="text-pink-600 font-semibold">{service.price}</div> */}
             </div>
           ))}
         </div>

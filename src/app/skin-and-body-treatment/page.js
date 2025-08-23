@@ -33,7 +33,7 @@ const cuppingTherapies = [
     title: "Facial Cupping Therapy",
     description:
       "A gentle, rejuvenating technique that uses small suction cups to stimulate facial muscles, increase blood flow, and enhance natural collagen production for a youthful glow.",
-    duration: "60 minutes",
+    // duration: "60 minutes",
     startingPrice: "₹3,000",
     benefits: ["Improved skin tone", "Reduced puffiness", "Lymphatic drainage", "Natural glow"],
     includes: ["Skin assessment", "Facial cupping session", "Soothing serum application", "Post-care advice"],
@@ -103,11 +103,15 @@ const cuppingTherapies = [
 
                           <p className="text-gray-600 mb-3 text-sm leading-relaxed">{therapy.description}</p>
 
-                          <div className="mb-3">
-                            <span className="inline-flex items-center bg-white text-pink-700 px-2 py-1 rounded-full text-xs font-medium">
-                              Duration: {therapy.duration}
-                            </span>
-                          </div>
+                          {/* Duration (show only if exists) */}
+{therapy.duration && (
+  <div className="mb-3">
+    <span className="inline-flex items-center bg-white text-pink-700 px-2 py-1 rounded-full text-xs font-medium">
+      Duration: {therapy.duration}
+    </span>
+  </div>
+)}
+
 
                           <div className="mb-3">
                             <h4 className="font-semibold text-gray-900 mb-1 text-sm">Benefits:</h4>
