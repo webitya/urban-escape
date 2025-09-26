@@ -53,6 +53,11 @@ export default function Footer() {
                   Gallery
                 </Link>
               </li>
+                 <li>
+                <Link href="/wellness-services" className="text-gray-300 hover:text-pink-400 transition-colors">
+                  Wellness Services
+                </Link>
+              </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-pink-400 transition-colors">
                   Contact
