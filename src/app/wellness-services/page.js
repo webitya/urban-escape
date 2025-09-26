@@ -119,7 +119,7 @@ export default function LandingPage() {
         </section>
 
         {/* ========== SERVICES SECTION ========== */}
-        <section className="py-12 px-4 max-w-6xl mx-auto">
+        <section className="py-12 px-4 mx-auto">
           <h2 className="text-2xl font-bold text-center mb-8">Our Massage Services</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {services.map((s, i) => (
@@ -159,7 +159,7 @@ export default function LandingPage() {
         {/* ========== PACKAGES SECTION ========== */}
         <section className="py-12 px-4 bg-pink-50">
           <h2 className="text-2xl font-bold text-center mb-8">Service Packages</h2>
-          <div className="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4  mx-auto">
             {packages.map((p, i) => (
               <div
                 key={i}
