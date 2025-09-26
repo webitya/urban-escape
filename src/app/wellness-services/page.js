@@ -1,60 +1,54 @@
 "use client"
 
-import { Phone, Leaf, Heart, Flower2, Dumbbell, Footprints, Sparkles } from "lucide-react"
+import { Flower2, Phone } from "lucide-react"
+import Link from "next/link"
+import SpaIcon from "@mui/icons-material/Spa"
 
-// ====================== Services Data ======================
 const services = [
   {
     title: "Balinese Massage",
-    icon: <Leaf className="w-10 h-10 text-pink-500" />,
+    image: "/images/balinese.jpg",
     desc: "Traditional Indonesian massage combining stretches, acupressure & aromatherapy oils.",
     duration: "60-90 minutes",
     benefits: ["Deep relaxation", "Improved circulation", "Stress relief", "Spiritual balance"],
-    message: "Hi! I’d like to book a Balinese Massage. Can you share available slots?",
   },
   {
     title: "Bamboo Massage",
-    icon: <Heart className="w-10 h-10 text-pink-500" />,
+    image: "/images/bamboo.jpg",
     desc: "Massage using heated bamboo canes to knead and release muscle tension.",
     duration: "60-90 minutes",
     benefits: ["Muscle tension relief", "Flexibility", "Circulation", "Lymphatic drainage"],
-    message: "Hi! I’d like to book a Bamboo Massage. Can you assist me?",
   },
   {
     title: "Potli Massage",
-    icon: <Flower2 className="w-10 h-10 text-pink-500" />,
+    image: "/images/potli.jpg",
     desc: "Ayurvedic massage with heated herbal pouches filled with medicinal herbs.",
     duration: "60-90 minutes",
     benefits: ["Pain relief", "Detoxification", "Skin texture", "Muscle strength"],
-    message: "Hi! I’m interested in a Potli Massage. Please confirm availability.",
   },
   {
     title: "Foot Reflexology",
-    icon: <Footprints className="w-10 h-10 text-pink-500" />,
+    image: "/images/reflexology.jpg",
     desc: "Pressure points massage on feet, hands & ears for total wellness.",
     duration: "60-90 minutes",
     benefits: ["Circulation", "Stress reduction", "Better sleep", "Overall wellness"],
-    message: "Hi! I’d like to book a Foot Reflexology session.",
   },
   {
     title: "Swedish Massage",
-    icon: <Sparkles className="w-10 h-10 text-pink-500" />,
+    image: "/images/swedish.jpg",
     desc: "Gentle relaxing massage with long strokes & kneading.",
     duration: "60-90 minutes",
     benefits: ["Stress relief", "Circulation", "Muscle relaxation", "Better sleep"],
-    message: "Hi! I want to book a Swedish Massage. Can you help me?",
   },
   {
     title: "Deep Tissue Massage",
-    icon: <Dumbbell className="w-10 h-10 text-pink-500" />,
+    image: "/images/deep.jpg",
     desc: "Targets deeper layers of muscle for chronic pain & tension relief.",
     duration: "60-90 minutes",
     benefits: ["Pain relief", "Mobility", "Reduced inflammation", "Faster healing"],
-    message: "Hi! I’d like to book a Deep Tissue Massage for pain relief.",
   },
 ]
 
-// ====================== Packages Data ======================
 const packages = [
   {
     title: "Basic Package",
@@ -77,141 +71,153 @@ const packages = [
   },
 ]
 
-const phoneNumber = "919910979774" // WhatsApp number
-
-// ====================== Landing Page Component ======================
 export default function LandingPage() {
   return (
-    <div className="bg-white text-gray-800">
-      {/* ===== HERO SECTION ===== */}
-      <section className="relative bg-gradient-to-b from-pink-100 to-white">
-        <div className="max-w-6xl mx-auto px-6 py-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Rejuvenate Your Body & Soul
+    <div className="bg-white text-gray-800 flex flex-col min-h-screen">
+      
+      {/* ========== NAVBAR ========== */}
+     <nav className="flex justify-between items-center py-4 px-6 shadow-sm bg-white sticky top-0 z-50">
+      {/* Brand Logo (Icon + Text) */}
+       <Link href="/" className="flex items-center space-x-2">
+              <SpaIcon className="text-pink-600 text-3xl" />
+              <span className="text-xl font-bold text-gray-800">Urban Escape Wellness</span>
+            </Link>
+
+      {/* Call Button */}
+      <a
+        href="tel:+919910979774"
+        className="inline-flex items-center bg-pink-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-pink-600"
+      >
+        <Phone className="w-5 h-5 mr-2" /> Call Us
+      </a>
+    </nav>
+
+      <main className="flex-1">
+        {/* ========== HERO SECTION ========== */}
+        <section className="text-center py-16 px-4 bg-gradient-to-b from-pink-100 to-white">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Welcome to <span className="text-pink-500">Yombly Spa</span>
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Premium massage & wellness therapies designed to relax your body, refresh your mind, 
-            and restore your inner balance.
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Experience luxury massages and wellness therapies designed to rejuvenate your mind, body & soul.
           </p>
           <div className="mt-6 flex justify-center gap-4">
-            {/* WhatsApp CTA */}
             <a
-              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                "Hi! I’d like to book a massage session. Please assist me."
-              )}`}
+              href="https://wa.me/919910979774?text=Hi!%20I%20want%20to%20book%20a%20service."
               target="_blank"
-              className="bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-600 shadow"
+              className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600"
             >
-              <Phone className="inline w-5 h-5 mr-2" />
               Book on WhatsApp
             </a>
-            {/* Explore CTA */}
             <a
-              href="#services"
-              className="bg-white text-pink-500 px-6 py-3 rounded-lg font-semibold border border-pink-500 hover:bg-pink-50"
+              href="/contact-us"
+              className="bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-600"
             >
-              Explore Services
+              Contact Us
             </a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ===== SERVICES SECTION ===== */}
-      <section id="services" className="py-12 px-4 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-8">Our Massage Services</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((s, i) => (
-            <div key={i} className="p-6 rounded-2xl border shadow hover:shadow-lg transition">
-              <div className="flex justify-center mb-3">{s.icon}</div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">{s.title}</h3>
-              <p className="text-sm text-gray-600 mb-2">{s.desc}</p>
-              <p className="text-sm font-semibold text-pink-500 mb-2">Duration: {s.duration}</p>
-              <ul className="text-sm text-gray-700 list-disc ml-4">
-                {s.benefits.map((b, j) => (
-                  <li key={j}>{b}</li>
-                ))}
-              </ul>
-              <div className="mt-4 flex gap-3">
-                {/* WhatsApp Button */}
-                <a
-                  href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(s.message)}`}
-                  target="_blank"
-                  className="flex-1 bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 text-center"
-                >
-                  WhatsApp
-                </a>
-                {/* Contact Us Button */}
-                <a
-                  href="/contact-us"
-                  className="flex-1 bg-pink-500 text-white py-2 rounded-lg font-semibold hover:bg-pink-600 text-center"
-                >
-                  Contact Us
-                </a>
+        {/* ========== SERVICES SECTION ========== */}
+        <section className="py-12 px-4 max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8">Our Massage Services</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            {services.map((s, i) => (
+              <div
+                key={i}
+                className="p-4 rounded-xl border border-pink-300 shadow-sm hover:shadow-md transition bg-white"
+              >
+                <img src={s.image} alt={s.title} className="w-full h-32 object-cover rounded-lg mb-3" />
+                <h3 className="text-base font-semibold mb-1 text-gray-900">{s.title}</h3>
+                <p className="text-sm text-gray-600 mb-2">{s.desc}</p>
+                <p className="text-xs font-semibold text-pink-500 mb-2">Duration: {s.duration}</p>
+                <ul className="text-xs text-gray-700 list-disc ml-4 space-y-1">
+                  {s.benefits.map((b, j) => (
+                    <li key={j}>{b}</li>
+                  ))}
+                </ul>
+                <div className="mt-3 flex gap-2">
+                  <a
+                    href={`https://wa.me/919910979774?text=Hi!%20I%20want%20to%20book%20${encodeURIComponent(s.title)}.`}
+                    target="_blank"
+                    className="flex-1 bg-green-500 text-white py-1.5 rounded-lg text-sm font-medium hover:bg-green-600 text-center"
+                  >
+                    WhatsApp
+                  </a>
+                  <a
+                    href="/contact-us"
+                    className="flex-1 bg-pink-500 text-white py-1.5 rounded-lg text-sm font-medium hover:bg-pink-600 text-center"
+                  >
+                    Contact
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* ===== PACKAGES SECTION ===== */}
-      <section className="py-12 px-4 bg-pink-50">
-        <h2 className="text-2xl font-bold text-center mb-8">Service Packages</h2>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {packages.map((p, i) => (
-            <div
-              key={i}
-              className={`p-6 rounded-2xl border shadow relative ${
-                p.popular ? "border-pink-500" : "border-gray-200"
-              }`}
-            >
-              {p.popular && (
-                <span className="absolute top-3 right-3 bg-pink-500 text-white text-xs px-2 py-1 rounded">
-                  Most Popular
-                </span>
-              )}
-              <h3 className="text-lg font-semibold text-gray-900">{p.title}</h3>
-              <p className="text-2xl font-bold text-pink-500">{p.price}</p>
-              <p className="text-sm text-gray-600 mb-3">{p.duration}</p>
-              <ul className="text-sm text-gray-700 list-disc ml-4">
-                {p.details.map((d, j) => (
-                  <li key={j}>{d}</li>
-                ))}
-              </ul>
-              <div className="mt-4 flex gap-3">
-                {/* WhatsApp CTA */}
-                <a
-                  href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                    `Hi! I’d like to book the ${p.title}.`
-                  )}`}
-                  target="_blank"
-                  className="flex-1 bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 text-center"
-                >
-                  WhatsApp
-                </a>
-                {/* Contact Us CTA */}
-                <a
-                  href="/contact-us"
-                  className="flex-1 bg-pink-500 text-white py-2 rounded-lg font-semibold hover:bg-pink-600 text-center"
-                >
-                  Contact Us
-                </a>
+        {/* ========== PACKAGES SECTION ========== */}
+        <section className="py-12 px-4 bg-pink-50">
+          <h2 className="text-2xl font-bold text-center mb-8">Service Packages</h2>
+          <div className="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+            {packages.map((p, i) => (
+              <div
+                key={i}
+                className={`p-5 rounded-xl border shadow-sm relative ${
+                  p.popular ? "border-pink-500" : "border-pink-300"
+                }`}
+              >
+                {p.popular && (
+                  <span className="absolute top-3 right-3 bg-pink-500 text-white text-xs px-2 py-1 rounded">
+                    Most Popular
+                  </span>
+                )}
+                <h3 className="text-base font-semibold text-gray-900">{p.title}</h3>
+                <p className="text-xl font-bold text-pink-500">{p.price}</p>
+                <p className="text-xs text-gray-600 mb-2">{p.duration}</p>
+                <ul className="text-xs text-gray-700 list-disc ml-4 space-y-1">
+                  {p.details.map((d, j) => (
+                    <li key={j}>{d}</li>
+                  ))}
+                </ul>
+                <div className="mt-3 flex gap-2">
+                  <a
+                    href={`https://wa.me/919910979774?text=Hi!%20I%20want%20to%20book%20${encodeURIComponent(p.title)}.`}
+                    target="_blank"
+                    className="flex-1 bg-green-500 text-white py-1.5 rounded-lg text-sm font-medium hover:bg-green-600 text-center"
+                  >
+                    WhatsApp
+                  </a>
+                  <a
+                    href="/contact-us"
+                    className="flex-1 bg-pink-500 text-white py-1.5 rounded-lg text-sm font-medium hover:bg-pink-600 text-center"
+                  >
+                    Contact
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* ===== CONTACT SECTION ===== */}
-      <section className="text-center py-12 px-4">
-        <h2 className="text-lg font-bold text-gray-900">Need a Custom Package?</h2>
-        <p className="text-gray-600">Contact us to create a personalized wellness package.</p>
-        <a
-          href={`tel:+${phoneNumber}`}
-          className="mt-4 inline-flex items-center bg-pink-500 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-600"
-        >
-          <Phone className="w-5 h-5 mr-2" /> Call +91 99109 79774
-        </a>
-      </section>
+        {/* ========== CONTACT SECTION ========== */}
+        <section className="text-center py-12 px-4">
+          <h2 className="text-lg font-bold text-gray-900">Need a Custom Package?</h2>
+          <p className="text-gray-600">Contact us to create a personalized wellness package.</p>
+          <a
+            href="tel:+919910979774"
+            className="mt-4 inline-flex items-center bg-pink-500 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-600"
+          >
+            <Phone className="w-5 h-5 mr-2" /> Call +91 99109 79774
+          </a>
+        </section>
+      </main>
+
+      {/* ========== FOOTER ========== */}
+      <footer className="bg-gray-100 text-gray-600 text-center py-6 mt-auto">
+        &copy; {new Date().getFullYear()} Urban Escape Wellness
+. All rights reserved.
+      </footer>
     </div>
   )
 }
