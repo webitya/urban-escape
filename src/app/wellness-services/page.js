@@ -96,7 +96,7 @@ export default function LandingPage() {
         {/* ========== HERO SECTION ========== */}
         <section className="text-center py-16 px-4 bg-gradient-to-b from-pink-100 to-white">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Welcome to <span className="text-pink-500">Yombly Spa</span>
+            Welcome to <span className="text-pink-500">Urban Escape Wellness</span>
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Experience luxury massages and wellness therapies designed to rejuvenate your mind, body & soul.
