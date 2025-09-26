@@ -61,7 +61,7 @@ export default function LandingPage() {
       
 
       {/* NAVBAR */}
-      <nav className="flex justify-between items-center py-3 px-4 md:px-8 shadow-sm bg-white sticky top-0 z-50">
+      <nav className="flex justify-between items-center py-3 px-2 md:px-8 shadow-sm bg-white sticky top-0 z-50">
         <Link href="/" className="flex items-center space-x-2">
           <SpaIcon className="text-pink-600 text-2xl" />
           <span className="text-lg font-bold text-gray-800">Urban Escape Wellness</span>
@@ -76,37 +76,39 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* HERO SECTION */}
-        <section className="relative h-[80vh] flex items-center justify-center text-center text-white px-6">
-          <img
-            src={hotStoneService.heroImage}
-            alt={hotStoneService.title}
-            className="absolute inset-0 w-full h-full object-cover object-center z-0 brightness-75"
-          />
-          <div className="absolute inset-0 bg-black/30 z-10"></div>
-          <div className="relative z-20 max-w-2xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">
-              Relax with <span className="text-pink-400">Hot Stone Massage</span>
-            </h1>
-            <p className="text-base md:text-lg text-gray-100 mb-6 drop-shadow-md">
-              Melt away stress and experience total relaxation with our luxury Hot Stone Therapy.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="https://wa.me/919910979774?text=Hi!%20I%20want%20to%20book%20a%20Hot%20Stone%20Massage."
-                target="_blank"
-                className="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition text-sm md:text-base shadow-lg"
-              >
-                Book on WhatsApp
-              </a>
-              <a
-                href="tel:+919910979774"
-                className="bg-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-600 transition text-sm md:text-base shadow-lg"
-              >
-                Call Now
-              </a>
-            </div>
-          </div>
-        </section>
+    {/* HERO SECTION */}
+<section className="relative h-[220px] md:h-[80vh] flex items-center justify-center text-center text-white px-6">
+  <img
+    src={hotStoneService.heroImage}
+    alt={hotStoneService.title}
+    className="absolute inset-0 w-full h-full object-cover object-center z-0 brightness-75"
+  />
+  <div className="absolute inset-0 bg-black/30 z-10"></div>
+  <div className="relative z-20 max-w-2xl mx-auto">
+    <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mb-2 md:mb-4 drop-shadow-lg">
+      Relax with <span className="text-pink-400">Hot Stone Massage</span>
+    </h1>
+    <p className="text-sm md:text-base text-gray-100 mb-4 md:mb-6 drop-shadow-md">
+      Melt away stress and experience total relaxation with our luxury Hot Stone Therapy.
+    </p>
+    <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
+      <a
+        href="https://wa.me/919910979774?text=Hi!%20I%20want%20to%20book%20a%20Hot%20Stone%20Massage."
+        target="_blank"
+        className="bg-green-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold hover:bg-green-600 transition text-xs md:text-sm shadow-lg"
+      >
+        Book on WhatsApp
+      </a>
+      <a
+        href="tel:+919910979774"
+        className="bg-pink-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold hover:bg-pink-600 transition text-xs md:text-sm shadow-lg"
+      >
+        Call Now
+      </a>
+    </div>
+  </div>
+</section>
+
 
         {/* SERVICE DETAILS */}
         <section className="py-16 px-4 md:px-8 max-w-5xl mx-auto">
