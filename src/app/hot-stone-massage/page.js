@@ -77,7 +77,11 @@ export default function LandingPage() {
       <main className="flex-1">
         {/* HERO SECTION */}
     {/* HERO SECTION */}
-<section className="relative h-[220px] md:h-[80vh] flex items-center justify-center text-center text-white px-6">
+{/* HERO SECTION */}
+{/* HERO SECTION */}
+{/* HERO SECTION */}
+{/* HERO SECTION */}
+<section className="relative h-[220px] md:h-[80vh] flex items-center justify-center text-center px-6">
   <img
     src={hotStoneService.heroImage}
     alt={hotStoneService.title}
@@ -85,10 +89,28 @@ export default function LandingPage() {
   />
   <div className="absolute inset-0 bg-black/30 z-10"></div>
   <div className="relative z-20 max-w-2xl mx-auto">
-    <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mb-2 md:mb-4 drop-shadow-lg">
-      Relax with <span className="text-pink-400">Hot Stone Massage</span>
+    <h1
+      className="text-2xl md:text-5xl font-extrabold leading-tight mb-2 md:mb-4 text-white"
+      style={{
+        textShadow: `-1px -1px 0 #ec4899, 1px -1px 0 #ec4899, -1px 1px 0 #ec4899, 1px 1px 0 #ec4899`
+      }}
+    >
+      Relax with{' '}
+      <span
+        className="text-pink-400"
+        style={{
+          textShadow: `-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff`
+        }}
+      >
+        Hot Stone Massage
+      </span>
     </h1>
-    <p className="text-sm md:text-base text-gray-100 mb-4 md:mb-6 drop-shadow-md">
+    <p
+      className="text-xs md:text-lg text-white mb-4 md:mb-6"
+      style={{
+        textShadow: `-1px -1px 0 #ec4899, 1px -1px 0 #ec4899, -1px 1px 0 #ec4899, 1px 1px 0 #ec4899`
+      }}
+    >
       Melt away stress and experience total relaxation with our luxury Hot Stone Therapy.
     </p>
     <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
@@ -108,6 +130,10 @@ export default function LandingPage() {
     </div>
   </div>
 </section>
+
+
+
+
 
 
         {/* SERVICE DETAILS */}
