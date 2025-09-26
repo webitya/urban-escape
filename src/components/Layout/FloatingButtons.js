@@ -4,7 +4,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp"
 
 export default function FloatingButtons() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+    <div className="fixed bottom-3 right-2 z-50 flex flex-col space-y-3">
       {/* WhatsApp Button */}
       <a
         href="https://wa.me/919910979774?text=Hi! I would like to book a massage appointment."
