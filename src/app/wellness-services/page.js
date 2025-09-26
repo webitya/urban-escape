@@ -76,7 +76,7 @@ export default function LandingPage() {
     <div className="bg-white text-gray-800 flex flex-col min-h-screen">
       
       {/* ========== NAVBAR ========== */}
-     <nav className="flex justify-between items-center py-4 px-6 shadow-sm bg-white sticky top-0 z-50">
+     <nav className="flex justify-between items-center py-4 px-1 md:px-6 shadow-sm bg-white sticky top-0 z-50">
       {/* Brand Logo (Icon + Text) */}
        <Link href="/" className="flex items-center space-x-2">
               <SpaIcon className="text-pink-600 text-3xl" />
