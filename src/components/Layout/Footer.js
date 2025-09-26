@@ -58,6 +58,11 @@ export default function Footer() {
                   Wellness Services
                 </Link>
               </li>
+               <li>
+                <Link href="/hot-stone-massage" className="text-gray-300 hover:text-pink-400 transition-colors">
+                  Hot Stone Massage
+                </Link>
+              </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-pink-400 transition-colors">
                   Contact
