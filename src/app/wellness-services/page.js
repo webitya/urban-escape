@@ -110,7 +110,7 @@ export default function LandingPage() {
               Book on WhatsApp
             </a>
             <a
-              href="/contact-us"
+              href="/contact"
               className="bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-600"
             >
               Contact Us
@@ -145,7 +145,7 @@ export default function LandingPage() {
                     WhatsApp
                   </a>
                   <a
-                    href="/contact-us"
+                    href="/contact"
                     className="flex-1 bg-pink-500 text-white py-1.5 rounded-lg text-sm font-medium hover:bg-pink-600 text-center"
                   >
                     Contact
@@ -189,7 +189,7 @@ export default function LandingPage() {
                     WhatsApp
                   </a>
                   <a
-                    href="/contact-us"
+                    href="/contact"
                     className="flex-1 bg-pink-500 text-white py-1.5 rounded-lg text-sm font-medium hover:bg-pink-600 text-center"
                   >
                     Contact
