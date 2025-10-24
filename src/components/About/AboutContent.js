@@ -41,7 +41,7 @@ export default function AboutContent() {
 
           <div className="relative">
             <img
-              src="/placeholder.svg?height=500&width=600"
+              src="/about.jpg?height=500&width=600"
               alt="Our spa interior"
               className="w-full h-96 object-cover rounded-2xl shadow-lg"
             />
