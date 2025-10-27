@@ -1,4 +1,3 @@
-// /src/components/Contact/ContactForm.js
 "use client"
 
 import { useState } from "react"
@@ -23,7 +22,6 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    // local validation
     if (!form.name || !form.email || !form.phone || !form.message) {
       alert("Please fill all required fields.")
       return
@@ -39,7 +37,6 @@ export default function ContactForm() {
 
       const data = await res.json()
       if (!res.ok) {
-        // server gave an error message
         console.error("Server error:", data)
         alert(data?.error || "Something went wrong. Please try again.")
       } else {
@@ -56,78 +53,90 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="max-w-lg mx-auto bg-white/60 backdrop-blur-sm border border-white/30 rounded-2xl p-5 sm:p-6 shadow-md">
-        <h3 className="text-center text-2xl font-semibold text-gray-900 mb-1">Get in Touch</h3>
-        <p className="text-center text-sm text-gray-600 mb-4">We’ll get back to you shortly.</p>
+      <motion.div
+        className="max-w-md mx-auto bg-gradient-to-br from-white/60 to-white/30 backdrop-blur-lg border border-white/40 rounded-3xl p-6 sm:p-8 shadow-xl"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h3 className="text-center text-2xl font-semibold text-gray-800 mb-1">
+          Get in Touch
+        </h3>
+        <p className="text-center text-sm text-gray-500 mb-6">
+          We’d love to hear from you — we’ll respond soon 🌿
+        </p>
 
-        <form onSubmit={handleSubmit} className="space-y-3">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Full name *"
-              className="w-full px-3 py-2 rounded-xl bg-white/30 backdrop-blur-sm border border-white/25 placeholder-gray-500 text-sm"
-              required
-            />
-            <input
-              name="email"
-              type="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Email *"
-              className="w-full px-3 py-2 rounded-xl bg-white/30 backdrop-blur-sm border border-white/25 placeholder-gray-500 text-sm"
-              required
-            />
-          </div>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Full Name *"
+            className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none placeholder-gray-500 text-sm transition"
+            required
+          />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              name="phone"
-              value={form.phone}
-              onChange={handleChange}
-              placeholder="Phone *"
-              className="w-full px-3 py-2 rounded-xl bg-white/30 backdrop-blur-sm border border-white/25 placeholder-gray-500 text-sm"
-              required
-            />
-            <select
-              name="service"
-              value={form.service}
-              onChange={handleChange}
-              className="w-full px-3 py-2 rounded-xl bg-white/30 backdrop-blur-sm border border-white/25 text-sm"
-            >
-              <option value="">Service of interest</option>
-              <option value="swedish-massage">Swedish Massage</option>
-              <option value="deep-tissue">Deep Tissue</option>
-              <option value="aroma">Aromatherapy</option>
-              <option value="hot-stone">Hot Stone</option>
-              <option value="reflexology">Reflexology</option>
-            </select>
-          </div>
+          <input
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Email *"
+            className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none placeholder-gray-500 text-sm transition"
+            required
+          />
+
+          <input
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+            placeholder="Phone *"
+            className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none placeholder-gray-500 text-sm transition"
+            required
+          />
+
+          <select
+            name="service"
+            value={form.service}
+            onChange={handleChange}
+            className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none text-sm text-gray-700 transition"
+          >
+            <option value="">Service of Interest</option>
+            <option value="swedish-massage">Swedish Massage</option>
+            <option value="deep-tissue">Deep Tissue</option>
+            <option value="aroma">Aromatherapy</option>
+            <option value="hot-stone">Hot Stone Therapy</option>
+            <option value="reflexology">Reflexology</option>
+          </select>
 
           <textarea
             name="message"
             rows={4}
             value={form.message}
             onChange={handleChange}
-            placeholder="Your message *"
-            className="w-full px-3 py-2 rounded-xl bg-white/30 backdrop-blur-sm border border-white/25 placeholder-gray-500 text-sm"
+            placeholder="Your Message *"
+            className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none placeholder-gray-500 text-sm transition"
             required
           />
 
-          <button
+          <motion.button
+            whileTap={{ scale: 0.97 }}
             type="submit"
             disabled={loading}
-            className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-white font-semibold text-sm shadow-md transition
-              ${loading ? "bg-pink-400" : "bg-gradient-to-r from-pink-600 to-pink-500 hover:from-pink-700 hover:to-pink-600"}`}
+            className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl text-white font-medium text-sm tracking-wide shadow-md transition
+              ${
+                loading
+                  ? "bg-pink-400"
+                  : "bg-gradient-to-r from-pink-600 to-pink-500 hover:from-pink-700 hover:to-pink-600"
+              }`}
           >
             <SendIcon fontSize="small" />
             <span>{loading ? "Sending..." : "Send Message"}</span>
-          </button>
+          </motion.button>
         </form>
-      </div>
+      </motion.div>
 
-      {/* Thank you modal */}
+      {/* ✅ Thank You Modal */}
       <AnimatePresence>
         {showModal && (
           <motion.div
@@ -137,18 +146,20 @@ export default function ContactForm() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="w-[92%] max-w-md p-6 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl text-center"
-              initial={{ scale: 0.85, opacity: 0 }}
+              className="w-[92%] max-w-md p-7 rounded-3xl bg-white/20 backdrop-blur-lg border border-white/30 shadow-2xl text-center"
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.85, opacity: 0 }}
+              exit={{ scale: 0.9, opacity: 0 }}
             >
-              <h4 className="text-2xl font-semibold text-pink-600 mb-2">Thank you! 💖</h4>
-              <p className="text-sm text-gray-200 mb-4">
-                We’ve received your message and will reach out shortly. A confirmation email was sent.
+              <h4 className="text-2xl font-semibold text-pink-600 mb-2">
+                Thank you! 💖
+              </h4>
+              <p className="text-sm text-white/90 mb-5">
+                We’ve received your message and will reach out to you soon.
               </p>
               <button
                 onClick={() => setShowModal(false)}
-                className="mt-1 inline-block bg-gradient-to-r from-pink-600 to-pink-500 text-white px-5 py-2 rounded-lg font-medium"
+                className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-6 py-2.5 rounded-xl font-medium hover:from-pink-700 hover:to-pink-600 transition"
               >
                 Close
               </button>
