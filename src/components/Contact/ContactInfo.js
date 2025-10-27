@@ -104,7 +104,7 @@ export default function ContactInfo() {
         ))}
       </div>
 
-      {/* Map */}
+{/*    
       <div className="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
         <div className="text-center text-gray-600">
           <LocationOnIcon className="text-4xl mb-2" />
@@ -113,7 +113,7 @@ export default function ContactInfo() {
         </div>
       </div>
 
-      {/* Quick Actions */}
+     
       <div className="bg-white p-6 rounded-xl shadow-lg">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
         <div className="space-y-3">
@@ -133,7 +133,7 @@ export default function ContactInfo() {
             WhatsApp Us
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
